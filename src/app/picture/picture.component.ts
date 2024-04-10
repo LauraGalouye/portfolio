@@ -1,10 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, } from '@angular/core';
 import { Picture } from '../models/picture.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-picture',
   standalone: true,
-  imports: [],
+  imports: [
+    CommonModule
+  ],
   templateUrl: `./picture.component.html`,
   styleUrl: './picture.component.css'
 })
@@ -16,7 +19,6 @@ export class PictureComponent implements OnInit {
   createdDate! : Date;
   buttonText! : string;
   likes! : number;
-  liked! : boolean;
   imageUrl! : string;
 
   ngOnInit(): void {

@@ -1,3 +1,2 @@
-<app-picture [picture]="myPicture"></app-picture>
-<app-picture [picture]="myPicturen2"></app-picture>
-<app-picture [picture]="myPicturen3"></app-picture>
+<app-picture *ngFor="let picture of pictures" [picture]="picture"></app-picture>
+

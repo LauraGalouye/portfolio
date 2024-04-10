@@ -1,12 +1,14 @@
-<div class="home-card">
-    <h2>{{picture.title}}</h2>
+<div class="home-card" [ngClass]="{'liked': buttonText==='Liked'}">
+    <h2 class="title">{{picture.title}}</h2>
     <p>Mise en ligne le {{picture.createdDate}}</p>
     <img [src]="picture.imageUrl" [alt]="picture.title">
     <p>{{picture.description}}</p>
+    <p *ngIf="picture.location">Photo prise à {{picture.location}}</p>
     <p>
-        <button (click)="onLike()">
+        <button class="button" (click)="onLike()">
            {{buttonText}}
         </button>
-        {{picture.likes}}
+        <span [ngStyle]="{ color: 'rgb(0, ' + picture.likes + ', 0)' }">🤌 {{ picture.likes }}</span>
+
     </p>
 </div>

@@ -1,7 +1,46 @@
 .home-card{
     width: 35%;
+    padding : 10px;
+    margin : 10px;
+    box-shadow: 0 0 10px #000;
+    border-radius: 5px;
     img{
         width: 100%;
         height: 100%;
+        box-shadow: 0 0 10px #000;
     }
+
+    .liked {
+        background-color: rgba(lightgreen, 0.4);
+        color: darkgreen;
+        button {
+          box-shadow: lightgreen 3px 3px 7px;
+          color: darkgreen;
+          &:active {
+            box-shadow: lightgreen 0 0 5px;
+          }
+        }
+      }
+}
+
+.title{
+    text-align: center;
+}
+
+.button{
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border: none;
+    box-shadow: lightgray 3px 3px 7px;
+    margin-right: 20px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    &:active {
+      transform: translate(1px, 1px);
+      box-shadow: lightgray 0 0 5px;
+    }
+
+
 }
